@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block title %}Error{% endblock %}
+
+<body class="container-fluid">
+    <main class="row">
+        {% block content %}
+        <p>ERROR: {{ error }}</p>
+        {% endblock %}
+    </body>
+</main>

@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block title %}Spaces{% endblock %}
+
+
+{% include 'navbar.html' %}
+
+<body class="container-fluid">
+    <main class="row">
+
+        {% block content %}
+        <div class="d-flex justify-content-center align-items-center vh-100 homepage_image">
+            <div class="row d-flex justify-content-center align-items-stretch w-100">
+                {% for space in spaces %}
+                <div class="col-md-4 d-flex mb-4">
+                    <div class="card shadow-sm w-100 h-100">
+                        <div class="card-body">
+                            <a href="/spaces/{{space.id}}"> <h5 class="card-title">{{ space.name }}</h5></a>
+                            <h5 class="card-title">{{ space.price }}</h5>
+                            <p class="card-text">{{ space.description }}</p>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        {% endblock %}
+    </body>
+</main>
+

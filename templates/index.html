@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock %}
+
+<body class="container-fluid">
+    <main class="row">
+    {% block content %}
+        <section class="container-fluid vh-100 d-flex align-items-center homepage_image">
+            <div class="row w-100 margin_bottom">
+                <div class="col-md-4 offset-md-1 mb-5">
+                    <div class="p-4 mb-5">
+                        <div class="card-body text-center mb-5" id="title_text_colour">
+                            <h1 class="card-title display-2">MakersBnB</h1>
+                            <!-- <h3 class="card-subtitle mb-5">Book your space</h3> -->
+                            <div class="d-grid gap-2 mb-5">
+                                <a href="/login" class="btn btn-primary btn-lg login_button m-2">Login</a>
+                                <a href="/register" class="btn btn-secondary btn-lg m-2">Sign Up</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    {% endblock %}
+    </main>
+</body>
+
+<!-- 
+    <section class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col">
+                <div class="row">
+                    <h1 class="">MakersBnB</h1>
+                </div>
+                <div class="row">
+                    <h3 class="">Book your space</h3>
+                </div>
+                <div class="row">
+                    <button><a href="/login">Login</a></button>
+                </div>
+                <div class="row">
+                    <button><a href="/register">Sign up</a></button>
+                </div>
+            </div>
+        </div>
+    </section> -->
